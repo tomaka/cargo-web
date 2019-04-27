@@ -17,6 +17,7 @@ RUN rustup target add --toolchain nightly wasm32-unknown-emscripten
 RUN rustup target add --toolchain nightly wasm32-unknown-unknown
 
 RUN cargo install cargo-web
+RUN cargo install wasm-pack
 RUN cargo web prepare-emscripten
 
 COPY config /root/.cargo
